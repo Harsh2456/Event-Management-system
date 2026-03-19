@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – upGrad EMS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-light">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="index.html">
+        <i class="bi bi-lightning-charge-fill me-2"></i>upGrad EMS
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-fill me-1"></i>Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html"><i class="bi bi-person-lock me-1"></i>Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#events-section"><i class="bi bi-calendar-event me-1"></i>Events</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html"><i class="bi bi-envelope me-1"></i>Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <div class="bg-primary text-white py-5">
+    <div class="container text-center">
+      <i class="bi bi-envelope-open-fill display-4 mb-3"></i>
+      <h2 class="fw-bold">Contact Us</h2>
+      <p class="lead opacity-75 mb-0">Have questions? We'd love to hear from you.</p>
+    </div>
+  </div>
+
+  <div class="container py-5">
+    <div class="row justify-content-center g-4">
+
+      <!-- Contact Info Cards -->
+      <div class="col-lg-4">
+        <div class="d-flex flex-column gap-3">
+          <div class="card border-0 shadow-sm rounded-4 p-3">
+            <div class="d-flex align-items-center gap-3">
+              <div class="contact-icon-wrap bg-primary bg-opacity-10 rounded-3 p-3">
+                <i class="bi bi-geo-alt-fill text-primary fs-4"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1">Address</h6>
+                <small class="text-muted">Mumbai, Maharashtra, India</small>
+              </div>
+            </div>
+          </div>
+          <div class="card border-0 shadow-sm rounded-4 p-3">
+            <div class="d-flex align-items-center gap-3">
+              <div class="contact-icon-wrap bg-success bg-opacity-10 rounded-3 p-3">
+                <i class="bi bi-telephone-fill text-success fs-4"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1">Phone</h6>
+                <small class="text-muted">+91 80-98765432</small>
+              </div>
+            </div>
+          </div>
+          <div class="card border-0 shadow-sm rounded-4 p-3">
+            <div class="d-flex align-items-center gap-3">
+              <div class="contact-icon-wrap bg-warning bg-opacity-10 rounded-3 p-3">
+                <i class="bi bi-envelope-fill text-warning fs-4"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1">Email</h6>
+                <small class="text-muted">support@upgrad.com</small>
+              </div>
+            </div>
+          </div>
+          <div class="card border-0 shadow-sm rounded-4 p-3">
+            <div class="d-flex align-items-center gap-3">
+              <div class="contact-icon-wrap bg-info bg-opacity-10 rounded-3 p-3">
+                <i class="bi bi-clock-fill text-info fs-4"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1">Working Hours</h6>
+                <small class="text-muted">Mon–Fri: 9 AM – 6 PM IST</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-7">
+        <div class="card border-0 shadow-lg rounded-4">
+          <div class="card-body p-4 p-md-5">
+            <h4 class="fw-bold text-primary mb-1">Send Us a Message</h4>
+            <p class="text-muted mb-4">Fill out the form and we'll get back to you within 24 hours.</p>
+
+            <div id="contact-success" class="alert alert-success d-none" role="alert">
+              <i class="bi bi-check-circle-fill me-2"></i>
+              Your message has been sent successfully! We'll get back to you soon.
+            </div>
+
+            <form id="contact-form" novalidate>
+              <div class="mb-3">
+                <label for="contact-name" class="form-label fw-semibold">Full Name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control form-control-lg" id="contact-name" placeholder="Your full name" required />
+                <div class="invalid-feedback">Name is required.</div>
+              </div>
+              <div class="mb-3">
+                <label for="contact-email" class="form-label fw-semibold">Email Address <span class="text-danger">*</span></label>
+                <input type="email" class="form-control form-control-lg" id="contact-email" placeholder="you@example.com" required />
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+              <div class="mb-4">
+                <label for="contact-description" class="form-label fw-semibold">Message / Description <span class="text-danger">*</span></label>
+                <textarea class="form-control" id="contact-description" rows="5" placeholder="Write your message here..." required minlength="10"></textarea>
+                <div class="invalid-feedback">Please enter a message (at least 10 characters).</div>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg fw-semibold">
+                  <i class="bi bi-send-fill me-2"></i>Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p class="mb-1"><i class="bi bi-lightning-charge-fill text-warning me-2"></i><strong>upGrad EMS</strong></p>
+      <small class="text-muted">&copy; 2025 upGrad. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
